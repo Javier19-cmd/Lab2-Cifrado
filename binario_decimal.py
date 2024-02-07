@@ -1,5 +1,5 @@
 def binario_a_ascii(binario):
-    # Conversor a la representación binaria a su valor ASCII
+    # Conversor de la representación binaria a su valor ASCII
     ascii_valor = 0
     for i in range(len(binario)):
         ascii_valor += int(binario[i]) * (2 ** (len(binario) - i - 1))

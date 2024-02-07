@@ -7,11 +7,12 @@ def ascii_a_binario_manual(ascii_valor):
     
     # Rellenando con ceros a la izquierda si es necesario
     if len(binario) < 8:
+        while len(binario) < 8:
             binario = "0" + binario
     return binario
 
 def caracteres_a_ascii(cadena):
-    # Convirtiendo cada carácter de la cadena a su valor ASCII
+    # Conversor de cada caracter de la cadena a su valor ASCII
     ascii_resultado = []
     for caracter in cadena:
         ascii_resultado.append(ord(caracter))
