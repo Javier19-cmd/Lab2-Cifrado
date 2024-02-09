@@ -3,7 +3,7 @@ from binario_decimal import *
 from string_base64 import *
 
 def main():
-    cadena = "Hola"
+    cadena = "Sun"
 
     # Obteniendo los valores ASCII de los caracteres
     ascii_resultado = caracteres_a_ascii(cadena)

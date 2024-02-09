@@ -23,3 +23,22 @@ def bin_to_base64(bin_list):
         base64_string += '='
 
     return base64_string
+
+def base64_to_ascii(base64_string):
+    # Diccionario para mapear cada caracter en base 64 a su correspondiente número entero
+    base64_chars = {char: i for i, char in enumerate('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/')}
+
+    # Eliminar los caracteres '=' al final de la cadena
+    base64_string = base64_string.rstrip('=')
+
+    # Convertir cada caracter en base 64 a su representación binaria de 6 bits
+    bin_string = ''.join([format(base64_chars[c], '06b') for c in base64_string])
+
+    # Añadir ceros al principio si la longitud no es múltiplo de 8
+    while len(bin_string) % 8 != 0:
+        bin_string = '0' + bin_string
+
+    # Convertir cada grupo de 8 bits a su correspondiente caracter ASCII
+    ascii_string = ''.join([chr(int(bin_string[i:i+8], 2)) for i in range(0, len(bin_string), 8)])
+
+    return ascii_string
