@@ -3,7 +3,7 @@ from binario_decimal import *
 from string_base64 import *
 
 def main():
-    cadena = "Sun"
+    cadena = "no"
 
     # Obteniendo los valores ASCII de los caracteres
     ascii_resultado = caracteres_a_ascii(cadena)
@@ -18,6 +18,10 @@ def main():
     base64 = bin_to_base64(binario_resultado)
     print("Representación base 64 de la cadena:")
     print(base64)
+    
+    string = base64_to_ascii(base64)
+    print("Representación ASCII de la cadena:")
+    print(string)
 
     # # Convertiendo la representación binaria a la cadena original
     # cadena_original = binario_a_cadena(''.join(binario_resultado))

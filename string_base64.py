@@ -12,7 +12,7 @@ def bin_to_base64(bin_list):
 
     # Añadir ceros al principio si la longitud no es múltiplo de 6
     while len(bin_string) % 6 != 0:
-        bin_string = '0' + bin_string
+        bin_string = "0" + bin_string #+ "0" # Se debe agregar al final no al principio.
 
     # Convertiendo cada grupo de 6 bits a su correspondiente caracter en base 64
     for i in range(0, len(bin_string), 6):
@@ -36,9 +36,11 @@ def base64_to_ascii(base64_string):
 
     # Añadiendo ceros al principio si la longitud no es múltiplo de 8
     while len(bin_string) % 8 != 0:
-        bin_string = '0' + bin_string
+        bin_string = "0" + bin_string  #+ "0" # Se debe agregar al final no al principio.
 
     # Convertiendo cada grupo de 8 bits a su correspondiente caracter ASCII
     ascii_string = ''.join([chr(int(bin_string[i:i+8], 2)) for i in range(0, len(bin_string), 8)])
 
     return ascii_string
+
+# En el xor, si la clave es mayor a la cadena, se debe completar la palabra con 0's, o sea el binario.
