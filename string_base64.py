@@ -44,3 +44,4 @@ def base64_to_ascii(base64_string):
     return ascii_string
 
 # En el xor, si la clave es mayor a la cadena, se debe completar la palabra con 0's, o sea el binario.
+# En el xor, si la clave es menor a la cadena, se debe completar la clave tantas veces hasta igualar la longitud de la cadena. (No importa si en la completada las repeticiones quedan incompletas, ya que el xor de 0 con 0 es 0, y el xor de 1 con 0 es 1, y el xor de 1 con 1 es 0).
