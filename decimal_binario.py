@@ -4,7 +4,6 @@ def ascii_a_binario_manual(ascii_valor):
         residuo = ascii_valor % 2
         binario = str(residuo) + binario
         ascii_valor //= 2
-    
     # Rellenando con ceros a la izquierda si es necesario
     if len(binario) < 8:
         while len(binario) < 8:
