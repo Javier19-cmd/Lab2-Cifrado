@@ -1,7 +1,7 @@
 from decimal_binario import *
 from binario_decimal import *
 from string_base64 import *
-from xor import *
+from xor_cadenas import *
 
 def main():
     cadena = "Hola Mundo"
@@ -16,7 +16,7 @@ def main():
     print("Representación binaria de la cadena:")
     print(binario_resultado)
     
-    key = 'llav'
+    key = 'lla'
     
     ascii_key = caracteres_a_ascii(key)
     ascii_key = [ascii_a_binario_manual(valor) for valor in ascii_key]
@@ -26,12 +26,12 @@ def main():
     
     # binario_resultado = [xor_bin_strings(binario, ascii_a_binario_manual(ascii_key[i % len(ascii_key)])) for i, binario in enumerate(binario_resultado)]
     
-    binario_resultado = xor_bin_strings(binario_resultado, ascii_key)
+    binario_resultado = xor_cadenas(binario_resultado, ascii_key)
     
     print("El resultado de la operación XOR es: ")
     print(binario_resultado)
     
-    resultado_xor = xor_bin_strings(binario_resultado, key)
+    resultado_xor = xor_cadenas(binario_resultado, key)
 
     # print("El resultado de la operación XOR es: ")
     # print(resultado_xor)
