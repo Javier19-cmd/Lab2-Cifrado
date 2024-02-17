@@ -6,7 +6,11 @@ def leer_imagen(ruta):
     except IOError:
         print("El archivo no se pudo abrir. Puede estar corrupto o el archivo puede no existir.")
 
-ruta_imagen = "imagen_xor.png"
-contenido_imagen = leer_imagen(ruta_imagen)
+# ruta_imagen = "imagen1.png"
+# contenido_imagen = leer_imagen(ruta_imagen)
 
-print(contenido_imagen)
+# print(len(contenido_imagen))
+
+# ruta_imagen = "imagen2.png"
+# contenido_imagen = leer_imagen(ruta_imagen)
+# print(len(contenido_imagen))
